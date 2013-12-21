@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stronglifts 5x5 iphone app v1.x db reader</title>
+    <script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+<form action="/readfile" method="post" enctype="multipart/form-data">
+    <input type="file" name="sqlitefile" />
+    <input type="button" value="Submit" />
+</form>
+<div id="workouts"></div>
+</body>
