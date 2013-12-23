@@ -3,6 +3,7 @@ var express = require("express"),
   path = require('path'),
   reader = require('./strongliftsreader.js'),
   fs = require('fs'),
+  less = require('less-middleware'),
   app = express()
 
 app.configure(function () {
@@ -10,6 +11,7 @@ app.configure(function () {
   app.use(express.bodyParser())
   app.use(logfmt.requestLogger())
   app.use(app.router)
+  app.use(less({ src: __dirname + '/public', compress:false }))
   app.use(express.static(path.join(__dirname, 'public')))
 })
 
