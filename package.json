@@ -2,7 +2,8 @@
   "name": "StrongReader",
   "version": "0.0.0",
   "description": "Reads stronglifts.com iphone app database dump, outputs csv",
-  "main": "index.js",
+  "private": true,
+  "main": "web.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
