@@ -4,26 +4,16 @@ $(function() {
     $.ajax({
       url: '/readfile',
       type: 'POST',
-      xhr: function() {  // Custom XMLHttpRequest
-        var myXhr = $.ajaxSettings.xhr();
-        if(myXhr.upload){ // Check if upload property exists
-          myXhr.upload.addEventListener('progress',progressHandlingFunction, false); // For handling the progress of the upload
-        }
-        return myXhr;
-      },
       data: formData,
       cache: false,
       contentType: false,
       processData: false
     }).done(function (workouts) {
-        $('#workouts').empty().append($('<ul>').append(workouts.map(printSession)))
+        $('#workouts .results').empty().append($('<ul>').append(workouts.map(printSession)))
       }
     );
   })
 
-  function progressHandlingFunction(a,b,c) {
-    console.log('pong', a, b, c)
-  }
   function printSession(session) {
     return $('<li>')
       .append($('<span>').addClass('date').text(new Date(session.date).toLocaleDateString()))
@@ -43,4 +33,13 @@ $(function() {
       .append(" ")
       .append($('<span>').addClass("sets").text(exercise.sets.map(function(s) {return s || '-'}). join(', ')))
   }
+
+  $(document)
+    .ajaxSend(function() {
+      $('#workouts .loading').show()
+      $('#workouts .example').hide()
+    })
+    .ajaxStop(function () {
+      $('#workouts .loading').hide()
+    })
 })
