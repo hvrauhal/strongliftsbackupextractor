@@ -9,9 +9,27 @@
     <script src="index.js"></script>
 </head>
 <body>
+<h1>Recover StrongLifts workouts</h1>
+<h2>The Beef</h2>
 <form action="/readfile" method="post" enctype="multipart/form-data">
     <input type="file" name="sqlitefile" />
     <input type="button" value="Submit" />
 </form>
-<div id="workouts"></div>
+<h3>Recovered workouts</h3>
+<div id="workouts">
+    <ul class="example"><li><span class="date">9/14/2013</span> <span class="time">2:10:15 PM</span> <span class="bodyweight">76</span> <span class="notes">First Stronglifts 5x5 workout. Felt good.</span><ul class="exercises"><li><span class="name">squats</span> <span class="weight">20</span> <span class="sets">5, 5, 5, 5, 5</span></li><li><span class="name">benchpress</span> <span class="weight">20</span> <span class="sets">5, 5, 5, 5, 5</span></li><li><span class="name">barbellrow</span> <span class="weight">30</span> <span class="sets">5, 5, 5, 5, 5</span></li></ul></li><li><span class="date">9/16/2013</span> <span class="time">8:03:12 AM</span> <span class="bodyweight">76</span> <span class="notes">First B workout. The overheadpress feels difficult even with just the bar.</span><ul class="exercises"><li><span class="name">squats</span> <span class="weight">22.5</span> <span class="sets">5, 5, 5, 5, 5</span></li><li><span class="name">overheadpress</span> <span class="weight">20</span> <span class="sets">5, 5, 5, 5, 5</span></li><li><span class="name">deadlifts</span> <span class="weight">40</span> <span class="sets">5, -, -, -, -</span></li></ul></li>
+    <li>…</li></ul>
+</div>
+<h2>Help</h2>
+<div class="help">
+    <ol>
+        <li>Backup your iphone with itunes</li>
+        <li>Extract the backup with for example <a href="http://supercrazyawesome.com/">iPhone Backup Extractor</a>
+             <img src="img/1_extract_backup.png" alt="Extract the backup"/>
+        </li>
+        <li>Locate <code>StrongLifts.sqlite</code> file in the extracted backup: <img src="img/2_find_Stronglifts_in_backup.png"/></li>
+        <li>Upload <code>StrongLifts.sqlite</code>: <img src="img/3_upload_the_file.png"/></li>
+        <li>Profit! <img src="img/4_profit.png"/></li>
+    </ol>
+</div>
 </body>
