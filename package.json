@@ -5,7 +5,8 @@
   "private": true,
   "main": "web.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/node-dev web.js"
   },
   "author": "",
   "license": "ISC",
@@ -17,5 +18,11 @@
     "logfmt": "~0.18.1",
     "less": "~1.5.1",
     "less-middleware": "~0.1.14"
+  },
+  "devDependencies": {
+    "node-dev": "2.1.4"
+  },
+  "engines": {
+    "node": "0.10.x"
   }
 }
