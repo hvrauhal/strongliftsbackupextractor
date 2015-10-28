@@ -1,1 +1,2 @@
-Sources of [http://strongliftsbackupextractor.herokuapp.com/](http://strongliftsbackupextractor.herokuapp.com/)
+Find the sources and info at  
+[http://strongliftsbackupextractor.herokuapp.com/](http://strongliftsbackupextractor.herokuapp.com/)
